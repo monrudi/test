@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.7 on darwin)" generated="20210926 14:29:12.169" rpa="false" schemaversion="2">
+<suite id="s1" name="Tc1" source="/Users/iaui/Desktop/FWD/tc1.robot">
+<test id="s1-t1" name="Test case 1">
+<kw name="Load Workbook" library="openpyxl">
+<var>${wb}</var>
+<arg>${excel}</arg>
+<doc>Open the given filename and return the workbook</doc>
+<msg timestamp="20210926 14:29:19.622" level="INFO">${wb} = &lt;openpyxl.workbook.workbook.Workbook object at 0x7fa799645880&gt;</msg>
+<status status="PASS" starttime="20210926 14:29:19.605" endtime="20210926 14:29:19.622"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${ws}</var>
+<arg>${wb.get_active_sheet()}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.626" level="INFO">${ws} = &lt;Worksheet "data"&gt;</msg>
+<status status="PASS" starttime="20210926 14:29:19.623" endtime="20210926 14:29:19.626"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${dateOfBirth}</var>
+<arg>${ws.cell(2,2).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.629" level="INFO">${dateOfBirth} = 17122533</msg>
+<status status="PASS" starttime="20210926 14:29:19.626" endtime="20210926 14:29:19.629"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>dateOfBirth=${dateOfBirth}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.629" endtime="20210926 14:29:19.630"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${height}</var>
+<arg>${ws.cell(2,3).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.632" level="INFO">${height} = 160</msg>
+<status status="PASS" starttime="20210926 14:29:19.630" endtime="20210926 14:29:19.632"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>height=${height}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.633" endtime="20210926 14:29:19.635"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${weight}</var>
+<arg>${ws.cell(2,4).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.637" level="INFO">${weight} = 60</msg>
+<status status="PASS" starttime="20210926 14:29:19.635" endtime="20210926 14:29:19.638"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>weight=${weight}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.638" endtime="20210926 14:29:19.639"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${fname}</var>
+<arg>${ws.cell(2,5).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.642" level="INFO">${fname} = มลฤดี</msg>
+<status status="PASS" starttime="20210926 14:29:19.639" endtime="20210926 14:29:19.642"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>fname=${fname}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.643" endtime="20210926 14:29:19.643"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${lname}</var>
+<arg>${ws.cell(2,6).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.644" level="INFO">${lname} = อุ่นใจ</msg>
+<status status="PASS" starttime="20210926 14:29:19.643" endtime="20210926 14:29:19.644"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>lname=${lname}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.645" endtime="20210926 14:29:19.645"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${idCard}</var>
+<arg>${ws.cell(2,7).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.646" level="INFO">${idCard} = 1729800102428</msg>
+<status status="PASS" starttime="20210926 14:29:19.645" endtime="20210926 14:29:19.647"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>idCard={$idCard}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.647" endtime="20210926 14:29:19.649"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${laserIdCard}</var>
+<arg>${ws.cell(2,8).value}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210926 14:29:19.651" level="INFO">${laserIdCard} = JD1-1111111-11</msg>
+<status status="PASS" starttime="20210926 14:29:19.649" endtime="20210926 14:29:19.652"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>laserIdCard=${laserIdCard}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20210926 14:29:19.652" endtime="20210926 14:29:19.654"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver.chrome.options'].Options()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20210926 14:29:19.655" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fa799628dc0&gt;</msg>
+<status status="PASS" starttime="20210926 14:29:19.654" endtime="20210926 14:29:19.655"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-notifications</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20210926 14:29:19.656" endtime="20210926 14:29:19.657"/>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<var>${driver}</var>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20210926 14:29:19.659" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210926 14:29:23.265" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20210926 14:29:23.264" endtime="20210926 14:29:23.265"/>
+</kw>
+<msg timestamp="20210926 14:29:23.275" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 89
+Current browser version is 94.0.4606.61 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</msg>
+<status status="FAIL" starttime="20210926 14:29:19.658" endtime="20210926 14:29:23.276"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ifwd.fwd.co.th/easy-e-life/product-detail</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.276" endtime="20210926 14:29:23.276"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.277" endtime="20210926 14:29:23.277"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://ifwd.fwd.co.th/easy-e-life/policy-benefit</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.277" endtime="20210926 14:29:23.277"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/form/div[1]/div/div[1]/div/div/label[2]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.277" endtime="20210926 14:29:23.277"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/form/div[1]/div/div[2]/div/div[1]/div</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.278" endtime="20210926 14:29:23.278"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>dateOfBirth</arg>
+<arg>${dateOfBirth}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.278" endtime="20210926 14:29:23.278"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/form/div[2]/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.278" endtime="20210926 14:29:23.278"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.278" endtime="20210926 14:29:23.279"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="insurance-price-detail"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.279" endtime="20210926 14:29:23.279"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.279" endtime="20210926 14:29:23.279"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[5]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.279" endtime="20210926 14:29:23.279"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.279" endtime="20210926 14:29:23.279"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>height</arg>
+<arg>${height}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.280" endtime="20210926 14:29:23.280"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>weight</arg>
+<arg>${weight}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.280" endtime="20210926 14:29:23.280"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[1]/form/div[2]/div/div[2]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.280" endtime="20210926 14:29:23.280"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.281" endtime="20210926 14:29:23.281"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.282" endtime="20210926 14:29:23.282"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[1]/form/div[4]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.282" endtime="20210926 14:29:23.283"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.284" endtime="20210926 14:29:23.284"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,1400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.284" endtime="20210926 14:29:23.284"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[1]/form/div[2]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.285" endtime="20210926 14:29:23.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.285" endtime="20210926 14:29:23.286"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="vs__selected-options"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.286" endtime="20210926 14:29:23.286"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[1]/form/div[1]/div/div/div[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.287" endtime="20210926 14:29:23.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath: //*[contains(text(), "นาง")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.287" endtime="20210926 14:29:23.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="select-prefix"]/ul/li[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.287" endtime="20210926 14:29:23.288"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>fname</arg>
+<arg>${fname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.288" endtime="20210926 14:29:23.288"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>lname</arg>
+<arg>${lname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.289" endtime="20210926 14:29:23.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>idCard</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.291" endtime="20210926 14:29:23.291"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>idCard</arg>
+<arg>${idCard}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.291" endtime="20210926 14:29:23.292"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[1]/form/div[1]/div/div/div[1]</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.294" endtime="20210926 14:29:23.294"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>laserIdCard</arg>
+<arg>${laserIdCard}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.295" endtime="20210926 14:29:23.295"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.scrollTo(0,500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.296" endtime="20210926 14:29:23.296"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="checkbox"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.296" endtime="20210926 14:29:23.297"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.297" endtime="20210926 14:29:23.298"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="__layout"]/div/div[1]/div[2]/div/div/div[1]/form/div[3]/div[1]/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.300" endtime="20210926 14:29:23.300"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" starttime="20210926 14:29:23.301" endtime="20210926 14:29:23.301"/>
+</kw>
+<status status="FAIL" starttime="20210926 14:29:19.604" endtime="20210926 14:29:23.303">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 89
+Current browser version is 94.0.4606.61 with binary path /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+</status>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="FAIL" starttime="20210926 14:29:12.170" endtime="20210926 14:29:23.309"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tc1">Tc1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
